@@ -10,7 +10,7 @@ const Navbar = () => {
         <Link href={"/"}>
           <Image alt="logo" src={"/LogoCity.png"} height={80} width={80} />
         </Link>
-        <Link href={"/"}>Historia</Link>
+        <Link href={"/habitaciones"}>Habitaciones</Link>
         <Link href={"/"}>Contacto</Link>
       </div>
     </nav>

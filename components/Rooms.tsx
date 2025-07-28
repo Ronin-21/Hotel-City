@@ -95,12 +95,20 @@ const Rooms = () => {
               <BiHotel />
               <BiShower />
             </div>
-            <Link
+            {/* <Link
               href={"/"}
               className="px-6 py-2 mt-5 text-lg font-semibold text-white transition-colors bg-black rounded-md hover:bg-primary"
             >
               Ver más
-            </Link>
+            </Link> */}
+            <a
+              href="https://wubook.net/nneb/bk?f=today&n=1&ep=07b058c3&o=1.0.0.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 mt-5 text-lg font-semibold text-white transition-colors bg-black rounded-md hover:bg-primary"
+            >
+              Reservar ahora
+            </a>
           </div>
         </div>
       </div>
