@@ -11,7 +11,7 @@ const Navbar = () => {
           <Image alt="logo" src={"/LogoCity.png"} height={80} width={80} />
         </Link>
         <Link href={"/habitaciones"}>Habitaciones</Link>
-        <Link href={"/"}>Contacto</Link>
+        <Link href={"/contacto"}>Contacto</Link>
       </div>
     </nav>
   );
