@@ -48,9 +48,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-start justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Contáctos</p>
-          <p>Av. Belgrano 1500</p>
+          <p>Av. Manuel Belgrano 245</p>
           <p>Las Termas de Rio Hondo - Sgo. del Estero</p>
-          <p>+54 9 3858 480489</p>
+          <p>+54 9 3858 42-1018</p>
           <p>hotelcity@info.com.ar</p>
         </div>
       </div>

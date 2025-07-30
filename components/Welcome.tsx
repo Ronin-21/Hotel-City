@@ -29,7 +29,7 @@ const Welcome = () => {
       <div className="relative h-[650px] w-md">
         <div className="h-[650px] w-md rounded-lg absolute overflow-hidden shadow-xl top-0 right-0 z-10">
           <Image
-            src={"/pool.jpg"}
+            src={"/pool-1.jpg"}
             alt="Welcome Image"
             fill
             className="object-cover"

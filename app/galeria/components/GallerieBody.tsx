@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
-type TabKey = "habitaciones" | "restaurante" | "spa" | "eventos";
+type TabKey = "habitaciones" | "patio" | "spa" | "salon";
 
 interface Tab {
   key: TabKey;
@@ -11,10 +12,45 @@ interface Tab {
 
 const tabs: Tab[] = [
   { key: "habitaciones", label: "Habitaciones" },
-  { key: "restaurante", label: "Restaurante" },
+  { key: "patio", label: "Patio" },
   { key: "spa", label: "Spa & Piscina" },
-  { key: "eventos", label: "Eventos" },
+  { key: "salon", label: "Salón" },
 ];
+
+const images: Record<TabKey, string[]> = {
+  habitaciones: [
+    "/room-1.jpg",
+    "/room-2.jpg",
+    "/room-3.jpg",
+    "/room-4.png",
+    "/room-5.png",
+    "/room-6.png",
+  ],
+  patio: [
+    "/outside-1.png",
+    "/outside-2.png",
+    "/outside-3.png",
+    "/outside-4.png",
+    "/outside-5.png",
+    "/outside-6.jpg",
+  ],
+  spa: [
+    "/pool-1.jpg",
+    "/pool-4.png",
+    "/pool-3.png",
+    "/pool-2.jpg",
+    "/spa.jpg",
+    "/pool-5.png",
+  ],
+  salon: [
+    "/lobby-2.png",
+    "/lobby-3.png",
+    "/lobby-4.png",
+    "/lobby-5.png",
+    "/lobby-6.png",
+    "/lobby-1.jpg",
+  ],
+};
 
 const GallerieBody = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("habitaciones");
@@ -45,6 +81,20 @@ const GallerieBody = () => {
             >
               {tab.label}
             </button>
+          ))}
+        </div>
+        {/* Contenido de cada pestaña */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {images[activeTab].map((src, index) => (
+            <div key={index} className="overflow-hidden rounded-lg h-80">
+              <Image
+                src={`${src}?height=400&width=600`}
+                alt={"Imagen de " + activeTab}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -37,14 +37,14 @@ const ContactBody = () => {
       {/* Google Maps */}
       <div className="h-[500px] w-full bg-amber-200">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.9760201449376!2d-64.86641712373942!3d-27.50112121804716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94236e610ae9b341%3A0x969b77846583037d!2sHotel%20Ambassador!5e0!3m2!1ses!2sar!4v1750465890360!5m2!1ses!2sar"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.0370848899406!2d-64.86340659999999!3d-27.499222099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b521378c65963%3A0xf814b188c049c219!2sCity%20Hotel!5e0!3m2!1ses-419!2sar!4v1753915553394!5m2!1ses-419!2sar"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Ubicación Hotel Ambassador INN"
+          title="Ubicación Hotel City"
         />
       </div>
     </div>
