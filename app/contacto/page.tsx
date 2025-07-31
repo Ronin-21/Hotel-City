@@ -1,7 +1,7 @@
 import ContactBody from "./components/ContactBody";
 import ContactHero from "./components/ContactHero";
 
-export default function Home() {
+export default function Contact() {
   return (
     <main>
       <ContactHero />

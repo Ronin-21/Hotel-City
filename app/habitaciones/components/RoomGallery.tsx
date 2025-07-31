@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { BiHotel, BiShower, BiTv, BiWifi } from "react-icons/bi";
-import MotorReservas from "../../../components/MotorReservas";
 
 const RoomGallery = () => {
   return (
@@ -27,7 +26,6 @@ const RoomGallery = () => {
           </div>
         </div>
       </div>
-      <MotorReservas />
     </div>
   );
 };
