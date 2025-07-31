@@ -1,37 +1,26 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function POST() {
   try {
     const res = await fetch(
-      "https://kapi.wubook.net/reservations/v1/availability/",
+      "https://kapi.wubook.net/kp/reservations/fetch_today_reservations",
       {
+        method: "POST",
         headers: {
-          Authorization: `Bearer wb_cdde1dca-6d98-11f0-a990-001a4a4ef9b1`,
-          /* Authorization: `Bearer ${process.env.WUBOOK_API_KEY}`, */
-          "Content-Type": "application/json",
+          "x-api-key": process.env.WUBOOK_API_KEY as string,
+          "Content-Type": "application/x-www-form-urlencoded",
         },
       }
     );
 
-    const text = await res.text(); // leemos como texto para ver el error exacto
+    const text = await res.text();
+    const json = text.trim() === "" ? {} : JSON.parse(text);
 
-    if (!res.ok) {
-      return NextResponse.json(
-        {
-          error: "Error desde WuBook",
-          status: res.status,
-          response: text,
-        },
-        { status: 500 }
-      );
-    }
-
-    const data = JSON.parse(text);
-    return NextResponse.json(data);
+    return NextResponse.json(json);
   } catch (error) {
     return NextResponse.json(
       {
-        error: "Excepción en el servidor",
+        error: "Error al consultar reservas de hoy",
         message: (error as Error).message,
       },
       { status: 500 }
