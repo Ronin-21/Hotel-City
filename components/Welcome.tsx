@@ -20,7 +20,7 @@ const Welcome = () => {
           inolvidable!
         </p>
         <Link
-          href={"/"}
+          href={"/nosotros"}
           className="px-6 py-2 mt-5 text-lg font-semibold text-white transition-colors rounded-md bg-primary hover:bg-black"
         >
           Ver más

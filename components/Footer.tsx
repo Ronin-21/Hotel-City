@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full bg-primary">
-      <div className="container flex items-start justify-around h-full pt-16 text-lg text-white">
+      <div className="container flex items-start justify-around h-full pt-10 text-lg text-white">
         <div className="flex flex-col items-center justify-center">
           <Link href={"/"} className="">
             <Image
@@ -16,7 +16,7 @@ const Footer = () => {
             />
           </Link>
           <Link
-            href={"/"}
+            href={"/reservas"}
             className="px-6 py-2 my-4 font-semibold text-white transition-colors bg-black rounded-md hover:bg-white hover:text-dark text-base"
           >
             Reservar ahora
@@ -34,19 +34,19 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-start justify-center gap-2">
+        <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Links</p>
-          <Link href={"/"}>Servicios</Link>
-          <Link href={"/"}>Historia</Link>
-          <Link href={"/"}>Galería</Link>
+          <Link href={"/reservas"}>Servicios</Link>
+          <Link href={"/nosotros"}>Historia</Link>
+          <Link href={"/galeria"}>Galería</Link>
         </div>
-        <div className="flex flex-col items-start justify-center gap-2">
+        <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Ayuda</p>
-          <Link href={"/"}>Habitaciones</Link>
+          <Link href={"/habitaciones"}>Habitaciones</Link>
           <Link href={"/"}>Politica de privacidad</Link>
-          <Link href={"/"}>Contacto</Link>
+          <Link href={"/contacto"}>Contacto</Link>
         </div>
-        <div className="flex flex-col items-start justify-center gap-2">
+        <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Contáctos</p>
           <p>Av. Manuel Belgrano 245</p>
           <p>Las Termas de Rio Hondo - Sgo. del Estero</p>
@@ -55,10 +55,10 @@ const Footer = () => {
         </div>
       </div>
       {/* Derechos y Autoria */}
-      <div className="pb-10 pt-8 mt-2 text-center  border-dark/30 border-t-2">
+      <div className="pb-8 pt-6 mt-2 text-center  border-dark/30 border-t-2">
         <p className="text-white">
-          © 2025 Hotel Ambassador · Todos los derechos reservados · Sitio
-          desarrollado por Ronin WebDesign
+          © 2025 Hotel City · Todos los derechos reservados · Sitio desarrollado
+          por Ronin WebDesign · Powered by Alderete Informática
         </p>
       </div>
     </div>

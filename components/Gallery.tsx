@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Gallery = () => {
   return (
@@ -17,7 +18,14 @@ const Gallery = () => {
         {/* Cards */}
         <div className="flex flex-col items-center max-w-sm overflow-hidden h-[550px] rounded-lg">
           <div className="h-[350px] w-full relative">
-            <Image alt="img" src="/lobby-1.jpg" fill className="object-cover" />
+            <Link href="/galeria">
+              <Image
+                alt="img"
+                src="/lobby-1.jpg"
+                fill
+                className="object-cover"
+              />
+            </Link>
           </div>
           <div className="flex flex-col items-start justify-between gap-2">
             <p className="mt-3 text-2xl font-bold">Titulo</p>
@@ -31,7 +39,14 @@ const Gallery = () => {
         {/* Cards */}
         <div className="flex flex-col items-center w-full overflow-hidden grow h-[550px] rounded-lg">
           <div className="h-[350px] w-full relative">
-            <Image alt="img" src="/outside.jpg" fill className="object-cover" />
+            <Link href="/galeria">
+              <Image
+                alt="img"
+                src="/outside.jpg"
+                fill
+                className="object-cover"
+              />
+            </Link>
           </div>
           <div className="flex flex-col items-start justify-between gap-2">
             <p className="mt-3 text-2xl font-bold">Titulo</p>
@@ -45,7 +60,9 @@ const Gallery = () => {
         {/* Cards */}
         <div className="flex flex-col items-center max-w-sm overflow-hidden h-[550px] rounded-lg">
           <div className="h-[350px] w-full relative">
-            <Image alt="img" src="/spa.jpg" fill className="object-cover" />
+            <Link href="/galeria">
+              <Image alt="img" src="/spa.jpg" fill className="object-cover" />
+            </Link>
           </div>
           <div className="flex flex-col items-start justify-between gap-2">
             <p className="mt-3 text-2xl font-bold">Titulo</p>
