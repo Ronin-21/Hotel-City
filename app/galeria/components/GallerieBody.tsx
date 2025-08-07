@@ -56,9 +56,9 @@ const GallerieBody = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("habitaciones");
 
   return (
-    <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto my-20">
-      <h2 className="text-5xl text-primary font-semibold font-title">
-        Galería
+    <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto my-20 py-20">
+      <h2 className="text-5xl font-bold text-primary font-title text-shadow-sm text-shadow-dark/30">
+        Descubrí cada rincón de nuestro hotel
       </h2>
       <p className="text-center text-gray-700 max-w-2xl mb-10 text-lg">
         Descubre las instalaciones y servicios que ofrecemos en nuestro hotel.
@@ -66,17 +66,17 @@ const GallerieBody = () => {
         necesitas para una estancia inolvidable.
       </p>
       {/* Gallery Section */}
-      <div className="w-full">
+      <div className="w-7xl mt-10">
         {/* Botones de pestañas */}
         <div className="grid grid-cols-4 gap-2 mb-8">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`py-2 px-4 font-medium text-center border-b-2 ${
+              className={`py-2 px-4 font-semibold text-center border-b-[3px] cursor-pointer transition-all duration-300 ${
                 activeTab === tab.key
-                  ? "border-black text-black"
-                  : "border-transparent text-gray-500 hover:text-black"
+                  ? "border-primary text-white bg-linear-to-r from-primary to-amber-900 rounded-md"
+                  : "border-transparent text-dark/60 hover:text-primary"
               }`}
             >
               {tab.label}

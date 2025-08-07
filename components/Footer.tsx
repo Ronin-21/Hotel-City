@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import MyButton from "./MyButton";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-primary">
+    <div className="flex flex-col items-center justify-center w-full bg-dark">
       <div className="container flex items-start justify-around h-full pt-10 text-lg text-white">
         <div className="flex flex-col items-center justify-center">
           <Link href={"/"} className="">
@@ -15,36 +16,69 @@ const Footer = () => {
               width={80}
             />
           </Link>
-          <Link
-            href={"/reservas"}
-            className="px-6 py-2 my-4 font-semibold text-white transition-colors bg-black rounded-md hover:bg-white hover:text-dark text-base"
-          >
-            Reservar ahora
-          </Link>
-          {/* <p className="mt-4 text-xl font-semibold">Redes</p> */}
-          <div className="flex items-center justify-between gap-4 text-2xl">
-            <Link href={"/"}>
+          <MyButton content="Reservar ahora" link="/reservas" />
+          <div className="flex items-center justify-between gap-4 text-2xl mt-4">
+            <Link
+              href={"/"}
+              className="hover:text-primary transition-colors duration-100"
+            >
               <FaFacebookF />
             </Link>
-            <Link href={"/"}>
+            <Link
+              href={"/"}
+              className="hover:text-primary transition-colors duration-100"
+            >
               <FaInstagram />
             </Link>
-            <Link href={"/"}>
+            <Link
+              href={"/"}
+              className="hover:text-primary transition-colors duration-100"
+            >
               <FaTiktok />
             </Link>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Links</p>
-          <Link href={"/reservas"}>Servicios</Link>
-          <Link href={"/nosotros"}>Historia</Link>
-          <Link href={"/galeria"}>Galería</Link>
+          <Link
+            href={"/reservas"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Servicios
+          </Link>
+          <Link
+            href={"/nosotros"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Historia
+          </Link>
+          <Link
+            href={"/galeria"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Galería
+          </Link>
         </div>
         <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Ayuda</p>
-          <Link href={"/habitaciones"}>Habitaciones</Link>
-          <Link href={"/"}>Politica de privacidad</Link>
-          <Link href={"/contacto"}>Contacto</Link>
+          <Link
+            href={"/habitaciones"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Habitaciones
+          </Link>
+          <Link
+            href={"/"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Politica de privacidad
+          </Link>
+          <Link
+            href={"/contacto"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Contacto
+          </Link>
         </div>
         <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Contáctos</p>
@@ -55,10 +89,27 @@ const Footer = () => {
         </div>
       </div>
       {/* Derechos y Autoria */}
-      <div className="pb-8 pt-6 mt-2 text-center  border-dark/30 border-t-2">
+      <div className="pb-8 pt-6 mt-2 text-center  border-primary/50 border-t-2">
         <p className="text-white">
           © 2025 Hotel City · Todos los derechos reservados · Sitio desarrollado
-          por Ronin WebDesign · Powered by Alderete Informática
+          por
+          <Link
+            href={"https://ronin-webdesign.vercel.app/"}
+            target="_blank"
+            className="text-primary hover:font-semibold transition-all duration-100"
+          >
+            {" "}
+            Ronin WebDesign{" "}
+          </Link>
+          · Powered by
+          <Link
+            href={"https://www.aldereteinformatica.com.ar"}
+            target="_blank"
+            className="text-primary hover:font-semibold transition-all duration-100"
+          >
+            {" "}
+            Alderete Informática
+          </Link>
         </p>
       </div>
     </div>

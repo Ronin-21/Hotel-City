@@ -1,12 +1,13 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   variable: "--font-primary",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -34,12 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`${montserrat.variable} ${restora.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${restora.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
+        <script
+          defer
+          src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
+        ></script>
       </body>
     </html>
   );

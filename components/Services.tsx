@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { GiMicrophone } from "react-icons/gi";
 import {
   MdFreeBreakfast,
@@ -6,74 +5,53 @@ import {
   MdOutlineSpa,
   MdWifi,
 } from "react-icons/md";
+import Carousel from "./Slider";
+import Titles from "./Titles";
 
 const Services = () => {
   return (
-    <div className="container flex flex-col items-center justify-center min-h-screen gap-20 mx-auto">
-      {/* Titulos */}
-      <div className="flex items-center justify-between w-full">
-        <div className="flex flex-col items-start gap-3">
-          <h4 className="text-3xl">Nuestros servicios</h4>
-          <h3 className="text-5xl font-bold text-primary font-title">
-            Contamos con todo lo que necesitas
-          </h3>
-          <p className="max-w-lg mt-5 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            temporibus maxime unde alias, tenetur fugiat accusantium quod vitae
-            facere odio explicabo quisquam omnis numquam nostrum voluptatibus
-            voluptatem eligendi, ea a? Eius, esse!
-          </p>
-        </div>
-        <div className="flex items-center gap-16">
-          <div className="flex flex-col items-center">
-            <MdOutlinePool className="text-7xl text-primary" />
-            <p className="text-xl font-semibold text-dark/75">Piletas</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <MdOutlineSpa className="text-7xl text-primary" />
-            <p className="text-xl font-semibold text-dark/75">Spa</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <MdFreeBreakfast className="text-7xl text-primary" />
-            <p className="text-xl font-semibold text-dark/75">Desayuno</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <MdWifi className="text-7xl text-primary" />
-            <p className="text-xl font-semibold text-dark/75">Wifi</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <GiMicrophone className="text-7xl text-primary" />
-            <p className="text-xl font-semibold text-dark/75">Shows</p>
-          </div>
-        </div>
-      </div>
-      {/* Fotos y Comentarios */}
-      <div className="flex items-center w-full gap-20 justify-evenly">
-        <div className="relative w-[700px] overflow-hidden rounded-lg h-[450px]">
-          <Image src="/backyard.jpg" fill alt="img" className="object-cover" />
-        </div>
-        <div className="flex flex-col items-start max-w-xl gap-8">
-          <p className="text-lg">
-            &quot;El mejor hotel en el que me he hospedado. El servicio es
-            excelente y las instalaciones son de primera. El mejor hotel en el
-            que me he hospedado. El servicio es excelente y las instalaciones
-            son de primera. El mejor hotel en el que me he hospedado. El
-            servicio es excelente y las instalaciones son de primera.&quot;
-          </p>
-          <div className="flex items-center gap-4">
-            <Image
-              src="/user-default.png"
-              width={65}
-              height={65}
-              alt="avatar"
-              className="rounded-full"
+    <div className="w-full bg-white py-10">
+      <div className="container flex flex-col items-center justify-evenly min-h-screen gap-20 mx-auto py-20">
+        {/* Titulos */}
+        <div className="flex items-baseline-last justify-between w-full">
+          <div className="flex flex-col items-start gap-10">
+            <Titles
+              title="Contamos con todo lo que necesitas"
+              subtitle="Nuestros servicios"
             />
-            <div>
-              <p className="text-xl font-semibold">Juan Pérez</p>
-              <p className="text-sm text-dark/50">Córdoba</p>
+            <p className="max-w-xl text-lg">
+              En nuestro hotel, cada servicio está pensado para que disfrutes
+              una estadía sin preocupaciones, rodeado de confort y atención
+              personalizada. Nos esforzamos en brindarte una experiencia única,
+              combinando lo mejor del descanso con los beneficios naturales de
+              las aguas termales.
+            </p>
+          </div>
+          {/* Iconos */}
+          <div className="flex items-center gap-16">
+            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once">
+              <MdOutlinePool className="text-7xl text-primary" />
+              <p className="text-xl font-semibold text-dark/75">Piletas</p>
+            </div>
+            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-100">
+              <MdOutlineSpa className="text-7xl text-primary" />
+              <p className="text-xl font-semibold text-dark/75">Spa</p>
+            </div>
+            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-200">
+              <MdFreeBreakfast className="text-7xl text-primary" />
+              <p className="text-xl font-semibold text-dark/75">Desayuno</p>
+            </div>
+            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-300">
+              <MdWifi className="text-7xl text-primary" />
+              <p className="text-xl font-semibold text-dark/75">Wifi</p>
+            </div>
+            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-400">
+              <GiMicrophone className="text-7xl text-primary" />
+              <p className="text-xl font-semibold text-dark/75">Shows</p>
             </div>
           </div>
         </div>
+        <Carousel />
       </div>
     </div>
   );

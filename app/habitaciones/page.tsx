@@ -1,11 +1,11 @@
-import RoomGallery from "@/app/habitaciones/components/RoomGallery";
 import RoomHero from "@/app/habitaciones/components/RoomHero";
+import RoomBody from "./components/RoomBody";
 
 export default function Rooms() {
   return (
     <main>
       <RoomHero />
-      <RoomGallery />
+      <RoomBody />
     </main>
   );
 }

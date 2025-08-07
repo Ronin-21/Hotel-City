@@ -10,7 +10,7 @@ const RoomGallery = () => {
           <Image src="/room-1.jpg" fill alt="img" className="object-cover" />
         </div>
         <div className="flex flex-col items-start max-w-xl gap-8">
-          <h2 className="text-5xl text-primary font-semibold font-title">
+          <h2 className="text-5xl font-bold text-primary font-title text-shadow-sm text-shadow-dark/30">
             Habitacion Deluxe
           </h2>
           <p className="text-lg">

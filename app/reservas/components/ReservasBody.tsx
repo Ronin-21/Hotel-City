@@ -1,15 +1,15 @@
 const ReservasBody = () => {
   return (
-    <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto my-20">
-      <h2 className="text-5xl text-primary font-semibold font-title">
-        Reservá tu estadía
+    <div className="container flex flex-col items-center justify-center gap-10 mx-auto my-20 py-20">
+      <h2 className="text-5xl font-bold text-primary font-title text-shadow-sm text-shadow-dark/30">
+        Reservá tu descanso ideal
       </h2>
       <p className="text-center text-gray-700 max-w-2xl mb-10 text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illum
-        dicta cupiditate, laudantium voluptatem animi ipsam nemo laboriosam
-        impedit voluptates!
+        Elegí la habitación perfecta para vos y asegurá tu lugar en uno de los
+        destinos termales más reconocidos de Argentina. Reservá en pocos pasos,
+        sin complicaciones.
       </p>
-      <div className="w-full h-[800px] rounded-xl overflow-hidden shadow-lg">
+      <div className="w-7xl h-[800px] rounded-xl overflow-hidden shadow-lg mt-10">
         <iframe
           src="https://wubook.net/nneb/bk?f=today&n=1&ep=07b058c3&o=1.0.0.0"
           title="Motor de reservas Ambassador"

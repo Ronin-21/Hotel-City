@@ -1,13 +1,16 @@
 const ContactBody = () => {
   return (
-    <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto my-20">
-      <h2 className="text-5xl text-primary font-semibold font-title">
-        Contacto
+    <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto my-20 py-20">
+      <h2 className="text-5xl font-bold text-primary font-title text-shadow-sm text-shadow-dark/30">
+        Estamos acá para ayudarte
       </h2>
-      <p className="text-center text-gray-700 max-w-2xl mb-10 text-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illum
-        dicta cupiditate, laudantium voluptatem animi ipsam nemo laboriosam
-        impedit voluptates!
+      <p className="text-center text-dark max-w-2xl mb-10 text-lg">
+        ¿Tenés preguntas, querés hacer una reserva o necesitás más información?
+        Contactanos por cualquiera de estos medios y te responderemos lo antes
+        posible:
+      </p>
+      <p className="text-center text-dark/75 max-w-2xl">
+        Completa nuestro formulario y nos pondremos en contacto a la brevedad
       </p>
       {/* Contact Form Section */}
       <div className="flex flex-col items-center w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg mb-10">
@@ -15,20 +18,20 @@ const ContactBody = () => {
           <input
             type="text"
             placeholder="Nombre"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 border border-dark/30 text-dark rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/75 caret-primary placeholder:text-primary/50"
           />
           <input
             type="email"
             placeholder="Correo Electrónico"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 border border-dark/30 text-dark rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/75 caret-primary placeholder:text-primary/50"
           />
           <textarea
             placeholder="Mensaje"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary h-32"
+            className="w-full p-3 border border-dark/30 text-dark rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/75 h-32 caret-primary placeholder:text-primary/50"
           ></textarea>
           <button
             type="submit"
-            className="w-full px-6 py-3 text-white bg-primary rounded-lg hover:bg-primary-dark transition-colors"
+            className="w-full px-6 py-3 text-lg font-medium text-white text-shadow-md text-shadow-black/30 transition-colors rounded-md bg-primary hover:bg-black shadow-md shadow-black/50 cursor-pointer"
           >
             Enviar Mensaje
           </button>
