@@ -41,12 +41,6 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Links</p>
           <Link
-            href={"/reservas"}
-            className="hover:text-primary transition-colors duration-100"
-          >
-            Servicios
-          </Link>
-          <Link
             href={"/nosotros"}
             className="hover:text-primary transition-colors duration-100"
           >
@@ -58,20 +52,20 @@ const Footer = () => {
           >
             Galería
           </Link>
-        </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-          <p className="mb-4 text-2xl font-semibold">Ayuda</p>
           <Link
             href={"/habitaciones"}
             className="hover:text-primary transition-colors duration-100"
           >
             Habitaciones
           </Link>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <p className="mb-4 text-2xl font-semibold">Ayuda</p>
           <Link
             href={"/"}
             className="hover:text-primary transition-colors duration-100"
           >
-            Politica de privacidad
+            Inicio
           </Link>
           <Link
             href={"/contacto"}
@@ -79,13 +73,19 @@ const Footer = () => {
           >
             Contacto
           </Link>
+          <Link
+            href={"/"}
+            className="hover:text-primary transition-colors duration-100"
+          >
+            Politica de privacidad
+          </Link>
         </div>
         <div className="flex flex-col items-center justify-center gap-2">
           <p className="mb-4 text-2xl font-semibold">Contáctos</p>
           <p>Av. Manuel Belgrano 245</p>
           <p>Las Termas de Rio Hondo - Sgo. del Estero</p>
           <p>+54 9 3858 42-1018</p>
-          <p>hotelcity@info.com.ar</p>
+          <p>reservas@gattellaindustriaturistica.com</p>
         </div>
       </div>
       {/* Derechos y Autoria */}

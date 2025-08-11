@@ -3,9 +3,11 @@ const GallerieHero = () => {
     <div className="min-h-dvh bg-cover bg-center bg-[url('/gallerie-hero.jpg')] relative bg-fixed">
       <div className="absolute inset-0 flex items-center justify-center bg-black/50">
         <div className="flex flex-col items-center justify-center h-full gap-5 text-center text-white text-shadow-lg text-shadow-black/50">
-          <h2 className="text-2xl md:text-4xl font-medium">Bienvenido al</h2>
-          <h1 className="text-4xl font-bold md:text-8xl font-title">
-            Hotel City
+          <h2 className="text-2xl font-medium md:text-3xl animate-fade-down animate-once animate-duration-[3000ms]">
+            Bienvenidos a
+          </h2>
+          <h1 className="text-4xl font-bold md:text-9xl animate-fade-down animate-once animate-duration-[2000ms] uppercase font-title">
+            <span className="text-primary">City</span> Hotel
           </h1>
         </div>
       </div>

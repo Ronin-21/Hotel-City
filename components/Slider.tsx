@@ -2,9 +2,8 @@
 import clsx from "clsx"; // Para aplicar clases condicionales
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 
 const testimonials = [
   {
@@ -60,12 +59,12 @@ const Carousel = () => {
       <Slider
         ref={sliderRef}
         {...settings}
-        className="w-full max-w-3xl shadow-md shadow-black/50 rounded-lg h-[300px] md:h-[450px]"
+        className="w-full max-w-2xl shadow-md shadow-black/50 rounded-lg h-[300px] md:h-[400px]"
       >
         {testimonials.map((item, i) => (
           <div
             key={i}
-            className="relative w-full h-[300px] md:h-[450px] overflow-hidden rounded-lg"
+            className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg"
           >
             <Image
               src={item.img}
@@ -82,11 +81,11 @@ const Carousel = () => {
       {/* Testimonio sincronizado */}
       <div
         className={clsx(
-          "transition-opacity duration-500 ease-in-out max-w-2xl text-center flex flex-col items-center gap-6",
+          "transition-opacity duration-500 ease-in-out max-w-xl text-center flex flex-col items-center gap-8 relative",
           fade ? "opacity-0" : "opacity-100"
         )}
       >
-        <p className="text-lg leading-relaxed text-pretty">
+        <p className="text-lg italic leading-relaxed font-medium z-10">
           &quot;{t.text}&quot;
         </p>
         <div className="flex items-center gap-4">
@@ -99,9 +98,11 @@ const Carousel = () => {
           />
           <div className="text-left">
             <p className="text-xl font-semibold">{t.name}</p>
-            <p className="text-sm text-gray-500">{t.location}</p>
+            <p className="text-sm text-dark/75">{t.location}</p>
           </div>
         </div>
+        <ImQuotesLeft className="absolute text-8xl text-primary/50 -top-14 left-0" />
+        <ImQuotesRight className="absolute text-8xl text-primary/50 bottom-12 right-5" />
       </div>
     </div>
   );

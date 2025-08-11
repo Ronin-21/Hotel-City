@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Rooms from "@/components/Rooms";
 import Services from "@/components/Services";
 import Welcome from "@/components/Welcome";
+import WhatsappButton from "@/components/WhatsappButton";
 
 export default function Home() {
   return (
@@ -11,9 +12,10 @@ export default function Home() {
       <Hero />
       <Welcome />
       <Banner />
-      <Rooms />
       <Services />
+      <Rooms />
       <Gallery />
+      <WhatsappButton />
     </main>
   );
 }

@@ -4,22 +4,24 @@ import Titles from "./Titles";
 
 const Welcome = () => {
   return (
-    <div className="container flex items-center justify-around min-h-screen gap-10 mx-auto my-20">
-      <div className="flex flex-col items-start max-w-2xl gap-3">
-        <Titles title="Bienvenido a Hotel City" subtitle="Nuestra Historia" />
-        <p className="mt-5 text-lg">
-          En Hotel City, te ofrecemos una experiencia única de lujo y confort.
-          Disfruta de nuestras instalaciones de primera clase, servicio
-          excepcional y una ubicación inmejorable en el corazón de la ciudad.
-        </p>
-        <p className="text-lg">
-          Explora nuestras habitaciones elegantes, relájate en nuestras áreas
-          comunes y descubre todo lo que tenemos para ofrecer. ¡Tu estancia será
-          inolvidable!
-        </p>
+    <div className="container flex items-center justify-between min-h-screen gap-10 mx-auto my-20">
+      <div className="flex flex-col items-start max-w-2xl gap-14">
+        <Titles title="Bienvenido a City Hotel" subtitle="Sobre Nosotros" />
+        <div className="text-lg flex flex-col gap-3">
+          <p>
+            En Hotel City, te ofrecemos una experiencia única de lujo y confort.
+            Disfruta de nuestras instalaciones de primera clase, servicio
+            excepcional y una ubicación inmejorable en el corazón de la ciudad.
+          </p>
+          <p>
+            Explora nuestras habitaciones elegantes, relájate en nuestras áreas
+            comunes y descubre todo lo que tenemos para ofrecer. ¡Tu estancia
+            será inolvidable!
+          </p>
+        </div>
         <MyButton link={"/nosotros"} content={"Ver más"} />
       </div>
-      <div className="relative h-[650px] w-md">
+      <div className="relative h-[650px] w-md mr-10">
         <div className="h-[650px] w-md rounded-lg absolute overflow-hidden shadow-xl top-0 right-0 z-10 shadow-black/50 intersect:animate-fade-down intersect:animate-delay-200">
           <Image
             src={"/pool-1.jpg"}

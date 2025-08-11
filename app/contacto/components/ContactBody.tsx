@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 const ContactBody = () => {
   return (
     <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto my-20 py-20">
@@ -13,30 +15,7 @@ const ContactBody = () => {
         Completa nuestro formulario y nos pondremos en contacto a la brevedad
       </p>
       {/* Contact Form Section */}
-      <div className="flex flex-col items-center w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg mb-10">
-        <form className="w-full space-y-4">
-          <input
-            type="text"
-            placeholder="Nombre"
-            className="w-full p-3 border border-dark/30 text-dark rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/75 caret-primary placeholder:text-primary/50"
-          />
-          <input
-            type="email"
-            placeholder="Correo Electrónico"
-            className="w-full p-3 border border-dark/30 text-dark rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/75 caret-primary placeholder:text-primary/50"
-          />
-          <textarea
-            placeholder="Mensaje"
-            className="w-full p-3 border border-dark/30 text-dark rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/75 h-32 caret-primary placeholder:text-primary/50"
-          ></textarea>
-          <button
-            type="submit"
-            className="w-full px-6 py-3 text-lg font-medium text-white text-shadow-md text-shadow-black/30 transition-colors rounded-md bg-primary hover:bg-black shadow-md shadow-black/50 cursor-pointer"
-          >
-            Enviar Mensaje
-          </button>
-        </form>
-      </div>
+      <ContactForm />
       {/* Google Maps */}
       <div className="h-[500px] w-full bg-amber-200">
         <iframe

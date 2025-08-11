@@ -4,15 +4,17 @@ import Titles from "./Titles";
 
 const Gallery = () => {
   return (
-    <div className="container flex flex-col items-start justify-center min-h-screen mx-auto py-20">
+    <div className="container flex flex-col items-start justify-center mx-auto py-20 my-20">
       {/* Titulos */}
       <div className="flex flex-col items-start gap-10">
-        <Titles title="Galería de Imágenes" subtitle="Nuestras Instalaciones" />
+        <Titles
+          title="Comodidad, descanso y bienestar"
+          subtitle="Nuestras Instalaciones"
+        />
         <p className="max-w-2xl text-lg">
           Explorá nuestra galería de imágenes y sentí la experiencia antes de
           vivirla. Desde nuestras cómodas habitaciones y áreas comunes hasta las
-          relajantes piscinas termales y espacios verdes, cada imagen refleja el
-          alma del hotel y la tranquilidad que te espera en Termas de Río Hondo.
+          relajantes piscinas termales y espacios verdes.
         </p>
       </div>
       {/* Galeria */}

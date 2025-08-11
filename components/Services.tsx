@@ -1,57 +1,79 @@
-import { GiMicrophone } from "react-icons/gi";
-import {
-  MdFreeBreakfast,
-  MdOutlinePool,
-  MdOutlineSpa,
-  MdWifi,
-} from "react-icons/md";
-import Carousel from "./Slider";
+import Link from "next/link";
+import { FaTheaterMasks } from "react-icons/fa";
+import { IoIosFitness, IoIosRestaurant } from "react-icons/io";
+import { MdOutlinePool, MdOutlineSpa, MdWifi } from "react-icons/md";
 import Titles from "./Titles";
+
+const services = [
+  {
+    icon: <MdOutlinePool />,
+    title: "Piscinas",
+    description: "Piscinas internas y externas con agua termal",
+  },
+  {
+    icon: <IoIosRestaurant />,
+    title: "Restaurante & Bar",
+    description:
+      "Restaurante con menú regional e internacional, y bar con coctelería de autor.",
+  },
+  {
+    icon: <MdWifi />,
+    title: "Wi-Fi",
+    description:
+      "Wi-Fi de alta velocidad en todo el hotel para que te mantengas conectado.",
+  },
+  {
+    icon: <IoIosFitness />,
+    title: "Gimnasio",
+    description:
+      "Gimnasio equipado con máquinas de última generación y clases dirigidas.",
+  },
+  {
+    icon: <MdOutlineSpa />,
+    title: "Spa & Relax",
+    description:
+      "Spa con sauna seco, húmedo y masajes relajantes y terapéuticos.",
+  },
+  {
+    icon: <FaTheaterMasks />,
+    title: "Actividades Recreativas",
+    description: "Shows y actividades recreativas durante la temporada alta.",
+  },
+];
 
 const Services = () => {
   return (
-    <div className="w-full bg-white py-10">
-      <div className="container flex flex-col items-center justify-evenly min-h-screen gap-20 mx-auto py-20">
-        {/* Titulos */}
-        <div className="flex items-baseline-last justify-between w-full">
-          <div className="flex flex-col items-start gap-10">
-            <Titles
-              title="Contamos con todo lo que necesitas"
-              subtitle="Nuestros servicios"
-            />
-            <p className="max-w-xl text-lg">
-              En nuestro hotel, cada servicio está pensado para que disfrutes
-              una estadía sin preocupaciones, rodeado de confort y atención
-              personalizada. Nos esforzamos en brindarte una experiencia única,
-              combinando lo mejor del descanso con los beneficios naturales de
-              las aguas termales.
-            </p>
+    <div className="container flex flex-col items-center justify-evenly gap-24 mx-auto my-20 py-20">
+      {/* Servicios */}
+      <div className="flex flex-col items-center container gap-10">
+        <Titles
+          title="Contamos con todo lo que necesitas"
+          subtitle="Nuestros servicios"
+        />
+        <p className="max-w-xl text-lg self-start">
+          En nuestro hotel, cada servicio está pensado para que disfrutes una
+          estadía sin preocupaciones, rodeado de confort y atención
+          personalizada.
+        </p>
+      </div>
+      {/* Iconos */}
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 w-6xl justify-items-center">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center p-6 bg-white shadow-lg hover:shadow-black/50 transition-all duration-200 rounded-md hover:border-b-4 border-primary max-w-xs intersect:animate-fade-down intersect:animate-duration-[2000ms] group gap-2"
+          >
+            <div className="text-5xl text-primary">{service.icon}</div>
+            <h3 className="text-xl font-semibold">{service.title}</h3>
+            <p className="text-dark/60 text-center">{service.description}</p>
+            <Link
+              href={"/reservas"}
+              className="text-lg font-medium hover:text-primary transition-colors duration-200 group-hover:animate-fade-right group-hover:animate-duration-[2000ms] mt-5"
+            >
+              Reservar
+            </Link>
           </div>
-          {/* Iconos */}
-          <div className="flex items-center gap-16">
-            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once">
-              <MdOutlinePool className="text-7xl text-primary" />
-              <p className="text-xl font-semibold text-dark/75">Piletas</p>
-            </div>
-            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-100">
-              <MdOutlineSpa className="text-7xl text-primary" />
-              <p className="text-xl font-semibold text-dark/75">Spa</p>
-            </div>
-            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-200">
-              <MdFreeBreakfast className="text-7xl text-primary" />
-              <p className="text-xl font-semibold text-dark/75">Desayuno</p>
-            </div>
-            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-300">
-              <MdWifi className="text-7xl text-primary" />
-              <p className="text-xl font-semibold text-dark/75">Wifi</p>
-            </div>
-            <div className="flex flex-col items-center intersect:animate-fade-down intersect:animate-once intersect:animate-delay-400">
-              <GiMicrophone className="text-7xl text-primary" />
-              <p className="text-xl font-semibold text-dark/75">Shows</p>
-            </div>
-          </div>
-        </div>
-        <Carousel />
+        ))}
       </div>
     </div>
   );
