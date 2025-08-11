@@ -1,12 +1,9 @@
-"use client";
-
 import MyButton from "@/components/MyButton";
-import Image from "next/image";
 import Link from "next/link";
 import { FaBath, FaRegSnowflake, FaShower, FaTv } from "react-icons/fa";
 import { IoIosBed } from "react-icons/io";
 import { IoBed } from "react-icons/io5";
-import Slider from "react-slick";
+import RoomSlider from "./RoomSlider";
 
 const roomStandard = [
   {
@@ -33,39 +30,12 @@ const roomSuperior = [
 ];
 
 const RoomGallery = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 7000,
-    speed: 500,
-    pauseOnHover: true,
-  };
-
   return (
-    <div className="container flex flex-col items-center justify-center gap-60 mx-auto my-60">
+    <div className="container flex flex-col items-center justify-center md:gap-60 gap-40 mx-auto md:my-60 my-40">
       {/* Habitacion Superior */}
-      <div className="flex items-center w-full justify-center gap-10 relative">
-        <Slider
-          {...settings}
-          className="w-[700px] shadow-md shadow-black/50 rounded-lg h-[450px]"
-        >
-          {roomSuperior.map((room, i) => (
-            <div
-              key={i}
-              className="relative w-[700px] h-[450px] rounded-lg overflow-hidden"
-            >
-              <Image
-                src={room.img}
-                alt={`Imagen hotel ${i + 1}`}
-                fill
-                className="object-cover cursor-grab"
-              />
-            </div>
-          ))}
-        </Slider>
-        <div className="flex flex-col items-center justify-center text-center gap-8 max-w-xl text-white">
+      <div className="flex flex-col md:flex-row items-center w-full justify-center gap-10 relative">
+        <RoomSlider images={roomSuperior} />
+        <div className="flex flex-col items-center justify-center text-center gap-8 max-w-xl text-white px-4 md:px-0">
           <h2 className="text-5xl font-bold font-title text-shadow-sm text-shadow-dark/50 text-primary intersect:animate-fade-down intersect:animate-duration-[3000ms]">
             Habitación Superior
           </h2>
@@ -101,28 +71,11 @@ const RoomGallery = () => {
           </div>
           <MyButton content="Reservar ahora" link="/reservas" />
         </div>
-        <div className="absolute right-0 w-[800px] h-[600px] bg-dark -z-10"></div>
+        <div className="absolute translate-y-36 md:translate-y-0 md:right-0 w-full md:w-[800px] md:h-[600px] h-[650px] bg-dark -z-10"></div>
       </div>
       {/* Habitacion Estandard */}
-      <div className="flex flex-row-reverse items-center w-full justify-center gap-10 relative">
-        <Slider
-          {...settings}
-          className="w-[700px] shadow-md shadow-black/50 rounded-lg h-[450px]"
-        >
-          {roomStandard.map((room, i) => (
-            <div
-              key={i}
-              className="relative w-[700px] h-[450px] rounded-lg overflow-hidden"
-            >
-              <Image
-                src={room.img}
-                alt={`Imagen hotel ${i + 1}`}
-                fill
-                className="object-cover cursor-grab"
-              />
-            </div>
-          ))}
-        </Slider>
+      <div className="flex flex-col md:flex-row-reverse items-center w-full justify-center gap-10 relative">
+        <RoomSlider images={roomStandard} />
         <div className="flex flex-col items-center justify-center text-center gap-8 max-w-xl text-dark">
           <h2 className="text-5xl font-bold font-title text-shadow-sm text-shadow-dark/50 text-white intersect:animate-fade-down intersect:animate-duration-[3000ms]">
             Habitación Estandard
@@ -163,7 +116,7 @@ const RoomGallery = () => {
             Reservar ahora
           </Link>
         </div>
-        <div className="absolute left-0 w-[800px] h-[600px] bg-primary/50 -z-10"></div>
+        <div className="absolute translate-y-36 md:translate-y-0 md:left-0 w-full md:w-[800px] h-[600px] bg-primary/50 -z-10"></div>
       </div>
     </div>
   );

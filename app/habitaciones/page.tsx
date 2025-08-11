@@ -1,11 +1,15 @@
-import RoomHero from "@/app/habitaciones/components/RoomHero";
-import RoomBody from "./components/RoomBody";
+import PagesHero from "@/components/PagesHero";
+import RoomGallery from "./components/RoomGallery";
+import RoomServices from "./components/RoomServices";
+import WhatsappButton from "@/components/WhatsappButton";
 
-export default function Rooms() {
+export default function RoomsPage() {
   return (
     <main>
-      <RoomHero />
-      <RoomBody />
+      <PagesHero bgUrl="/room-hero.png" />
+      <RoomGallery />
+      <RoomServices />
+      <WhatsappButton />
     </main>
   );
 }

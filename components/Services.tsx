@@ -43,32 +43,38 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="container flex flex-col items-center justify-evenly gap-24 mx-auto my-20 py-20">
+    <div className="container flex flex-col items-center justify-evenly gap-20 mx-auto md:my-20 py-20 px-4">
       {/* Servicios */}
-      <div className="flex flex-col items-center container gap-10">
+      <div className="flex flex-col md:self-start gap-8 max-w-3xl">
         <Titles
           title="Contamos con todo lo que necesitas"
           subtitle="Nuestros servicios"
         />
-        <p className="max-w-xl text-lg self-start">
+        <p className="text-base sm:text-lg text-dark/60 text-center md:text-left">
           En nuestro hotel, cada servicio está pensado para que disfrutes una
           estadía sin preocupaciones, rodeado de confort y atención
           personalizada.
         </p>
       </div>
       {/* Iconos */}
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 w-6xl justify-items-center">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 w-full max-w-7xl justify-items-center px-2">
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 bg-white shadow-lg hover:shadow-black/50 transition-all duration-200 rounded-md hover:border-b-4 border-primary max-w-xs intersect:animate-fade-down intersect:animate-duration-[2000ms] group gap-2"
+            className="flex flex-col items-center p-6 bg-white shadow-lg hover:shadow-black/50 transition-all duration-200 rounded-md hover:border-b-4 border-primary max-w-xs group gap-4"
           >
-            <div className="text-5xl text-primary">{service.icon}</div>
-            <h3 className="text-xl font-semibold">{service.title}</h3>
-            <p className="text-dark/60 text-center">{service.description}</p>
+            <div className="text-4xl sm:text-5xl text-primary">
+              {service.icon}
+            </div>
+            <h3 className="text-lg sm:text-xl font-semibold">
+              {service.title}
+            </h3>
+            <p className="text-dark/50 text-center text-sm sm:text-base">
+              {service.description}
+            </p>
             <Link
               href={"/reservas"}
-              className="text-lg font-medium hover:text-primary transition-colors duration-200 group-hover:animate-fade-right group-hover:animate-duration-[2000ms] mt-5"
+              className="text-base sm:text-lg font-medium hover:text-primary transition-colors duration-200 group-hover:animate-fade-right group-hover:animate-duration-[2000ms] mt-4"
             >
               Reservar
             </Link>

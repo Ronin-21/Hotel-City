@@ -6,9 +6,10 @@ import MyButton from "./MyButton";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full bg-dark">
-      <div className="container flex items-start justify-around h-full pt-10 text-lg text-white">
-        <div className="flex flex-col items-center justify-center">
-          <Link href={"/"} className="">
+      <div className="container flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around gap-10 md:gap-0 h-full pt-10 px-6 md:px-0 text-base md:text-lg text-white">
+        {/* Logo y redes */}
+        <div className="flex flex-col items-center md:items-center justify-center text-center md:text-left">
+          <Link href={"/"}>
             <Image
               alt="logo"
               src={"/LogoCityNegativo.png"}
@@ -16,8 +17,10 @@ const Footer = () => {
               width={80}
             />
           </Link>
-          <MyButton content="Reservar ahora" link="/reservas" />
-          <div className="flex items-center justify-between gap-4 text-2xl mt-4">
+          <div className="mt-4">
+            <MyButton content="Reservar ahora" link="/reservas" />
+          </div>
+          <div className="flex items-center justify-center gap-4 text-xl md:text-2xl mt-4">
             <Link
               href={"/"}
               className="hover:text-primary transition-colors duration-100"
@@ -38,8 +41,10 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-          <p className="mb-4 text-2xl font-semibold">Links</p>
+
+        {/* Links */}
+        <div className="flex flex-col items-center md:items-center justify-center gap-2 text-center md:text-left">
+          <p className="mb-4 text-lg md:text-2xl font-semibold">Links</p>
           <Link
             href={"/nosotros"}
             className="hover:text-primary transition-colors duration-100"
@@ -59,8 +64,10 @@ const Footer = () => {
             Habitaciones
           </Link>
         </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-          <p className="mb-4 text-2xl font-semibold">Ayuda</p>
+
+        {/* Ayuda */}
+        <div className="flex flex-col items-center md:items-center justify-center gap-2 text-center md:text-left">
+          <p className="mb-4 text-lg md:text-2xl font-semibold">Ayuda</p>
           <Link
             href={"/"}
             className="hover:text-primary transition-colors duration-100"
@@ -77,20 +84,23 @@ const Footer = () => {
             href={"/"}
             className="hover:text-primary transition-colors duration-100"
           >
-            Politica de privacidad
+            Política de privacidad
           </Link>
         </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-          <p className="mb-4 text-2xl font-semibold">Contáctos</p>
+
+        {/* Contactos */}
+        <div className="flex flex-col items-center md:items-center justify-center gap-2 text-center md:text-left">
+          <p className="mb-4 text-lg md:text-2xl font-semibold">Contáctos</p>
           <p>Av. Manuel Belgrano 245</p>
           <p>Las Termas de Rio Hondo - Sgo. del Estero</p>
           <p>+54 9 3858 42-1018</p>
           <p>reservas@gattellaindustriaturistica.com</p>
         </div>
       </div>
-      {/* Derechos y Autoria */}
-      <div className="pb-8 pt-6 mt-2 text-center  border-primary/50 border-t-2">
-        <p className="text-white">
+
+      {/* Derechos y autoría */}
+      <div className="pb-8 pt-6 mt-2 text-center border-primary/50 border-t-2 px-4">
+        <p className="text-sm md:text-base text-white">
           © 2025 Hotel City · Todos los derechos reservados · Sitio desarrollado
           por
           <Link
