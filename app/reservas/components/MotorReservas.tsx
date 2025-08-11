@@ -2,9 +2,19 @@
 
 import { useState } from "react";
 
+interface WuBookData {
+  availabilities: {
+    room_id: number;
+    room_name: string;
+    date: string;
+    available: number;
+    price: number;
+  }[];
+}
+
 const MotorReservas = () => {
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState<WuBookData | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   const fetchReservations = async () => {
@@ -17,12 +27,16 @@ const MotorReservas = () => {
         method: "POST",
       });
 
-      const json = await res.json();
+      const json: WuBookData & { message?: string } = await res.json();
 
       if (!res.ok) throw new Error(json.message || "Error desconocido");
       setData(json);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Error desconocido");
+      }
     } finally {
       setLoading(false);
     }
@@ -53,4 +67,5 @@ const MotorReservas = () => {
     </section>
   );
 };
+
 export default MotorReservas;
