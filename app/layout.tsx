@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 const restora = localFont({
-  src: "../public/Restora.otf",
+  src: "../public/Restora.woff2",
   variable: "--font-title",
   display: "swap",
 });

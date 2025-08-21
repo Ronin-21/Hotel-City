@@ -19,36 +19,36 @@ const tabs: Tab[] = [
 
 const images: Record<TabKey, string[]> = {
   habitaciones: [
-    "/room-1.jpg",
-    "/room-2.jpg",
-    "/room-3.jpg",
-    "/room-4.png",
-    "/room-5.png",
-    "/room-6.png",
+    "/room-1.webp",
+    "/room-2.webp",
+    "/room-3.webp",
+    "/room-4.webp",
+    "/room-5.webp",
+    "/room-6.webp",
   ],
   patio: [
-    "/outside-1.png",
-    "/outside-2.png",
-    "/outside-3.png",
-    "/outside-4.png",
-    "/outside-5.png",
-    "/outside-6.jpg",
+    "/outside-1.webp",
+    "/outside-2.webp",
+    "/outside-3.webp",
+    "/outside-4.webp",
+    "/outside-5.webp",
+    "/outside-6.webp",
   ],
   spa: [
-    "/pool-1.jpg",
-    "/pool-4.png",
-    "/pool-3.png",
-    "/pool-2.jpg",
-    "/spa.jpg",
-    "/pool-5.png",
+    "/pool-1.webp",
+    "/pool-4.webp",
+    "/pool-3.webp",
+    "/pool-2.webp",
+    "/spa.webp",
+    "/pool-5.webp",
   ],
   salon: [
-    "/lobby-2.png",
-    "/lobby-3.png",
-    "/lobby-4.png",
-    "/lobby-5.png",
-    "/lobby-6.png",
-    "/lobby-1.jpg",
+    "/lobby-2.webp",
+    "/lobby-3.webp",
+    "/lobby-4.webp",
+    "/lobby-5.webp",
+    "/lobby-6.webp",
+    "/lobby-1.webp",
   ],
 };
 
@@ -64,7 +64,7 @@ const GalleryImages = () => {
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
             // aria-selected={activeTab === tab.key}
-            className={`py-2 md:px-4 font-semibold text-center border-b-[3px] cursor-pointer transition-all duration-300 ${
+            className={`py-2 md:px-4 font-semibold text-center border-b-[3px] cursor-pointer transition-all duration-300 overflow-hidden ${
               activeTab === tab.key
                 ? "border-primary text-amber-100 bg-gradient-to-r from-primary to-amber-900 rounded-md"
                 : "border-transparent text-dark/60 hover:text-primary"

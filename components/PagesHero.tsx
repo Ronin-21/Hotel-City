@@ -13,8 +13,8 @@ const PagesHero = ({ bgUrl }: HeroProps) => {
           <h2 className="text-2xl font-medium md:text-3xl animate-fade-down animate-once animate-duration-[3000ms]">
             Bienvenidos a
           </h2>
-          <h1 className="text-6xl font-bold md:text-9xl animate-fade-down animate-once animate-duration-[2000ms] uppercase font-title">
-            <span className="text-primary">City</span> Hotel
+          <h1 className="text-6xl md:text-8xl font-bold animate-fade-down animate-once animate-duration-[2000ms] font-title max-w-3xl">
+            Grand Hotel <span className="text-primary">City</span> Termal
           </h1>
         </div>
       </div>

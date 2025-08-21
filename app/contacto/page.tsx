@@ -5,7 +5,7 @@ import WhatsappButton from "@/components/WhatsappButton";
 export default function ContactPage() {
   return (
     <main>
-      <PagesHero bgUrl="/contact-hero.jpg" />
+      <PagesHero bgUrl="/contact-hero.webp" />
       <div className="container flex flex-col items-center justify-center min-h-screen gap-10 mx-auto md:my-20 py-20 px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-primary font-title text-shadow-sm text-shadow-dark/30 text-center md:text-left">
           Estamos acá para ayudarte

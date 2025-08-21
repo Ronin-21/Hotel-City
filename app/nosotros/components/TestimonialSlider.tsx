@@ -8,21 +8,21 @@ import Slider from "react-slick";
 
 const testimonials = [
   {
-    img: "/outside-2.png",
+    img: "/outside-2.webp",
     text: "El mejor hotel en el que me he hospedado. Servicio excelente e instalaciones de primera.",
     name: "Juan Pérez",
     location: "Córdoba",
     avatar: "/user-default.png",
   },
   {
-    img: "/outside-6.jpg",
+    img: "/outside-6.webp",
     text: "Una experiencia inolvidable. Todo el personal fue muy amable. ¡Volveré pronto!",
     name: "Lucía González",
     location: "Buenos Aires",
     avatar: "/user-default.png",
   },
   {
-    img: "/outside-5.png",
+    img: "/outside-5.webp",
     text: "Ubicación perfecta, excelente comida y un spa que te deja nuevo. Lo recomiendo 100%.",
     name: "Martín Romero",
     location: "Rosario",

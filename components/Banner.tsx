@@ -8,7 +8,7 @@ const Banner = () => {
         container
         h-[600px] md:h-[350px]
         mx-auto my-10 md:my-20
-        bg-[url('/outside-4.png')]
+        bg-[url('/outside-4.webp')]
         bg-cover 
         bg-top md:bg-center
         relative text-white

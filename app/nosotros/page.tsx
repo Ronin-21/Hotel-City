@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <main>
-      <PagesHero bgUrl="/pool-2.jpg" />
+      <PagesHero bgUrl="/pool-2.webp" />
       <div className="container max-w-7xl w-full flex flex-col items-center gap-10 mx-auto my-20 pb-20 px-4">
         {/* Intro */}
         <div className="flex flex-col md:flex-row items-center justify-between w-full min-h-[600px] gap-10 md:gap-0 md:w-7xl">
@@ -36,21 +36,21 @@ export default function AboutPage() {
         {/* Imágenes */}
         <div className="relative container mx-auto h-[500px] my-20 flex items-center justify-center">
           <Image
-            src="/lobby-7.jpg"
+            src="/lobby-7.webp"
             alt="Sobre Nosotros"
             width={500}
             height={300}
             className="w-[350px] md:w-[500px] h-[350px] md:h-[400px] object-cover rounded-lg shadow-lg absolute md:top-60 md:left-10 md:-translate-y-1/2 -top-20 shadow-black/50 blur-[2px]"
           />
           <Image
-            src="/bar-1.png"
+            src="/bar-1.webp"
             alt="Sobre Nosotros"
             width={500}
             height={300}
             className="w-full md:w-[600px] md:h-full h-[400px] rounded-lg shadow-lg shadow-black/50 object-cover z-10"
           />
           <Image
-            src="/outside-4.png"
+            src="/outside-4.webp"
             alt="Sobre Nosotros"
             width={500}
             height={300}

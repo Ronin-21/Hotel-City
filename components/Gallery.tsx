@@ -26,7 +26,7 @@ const Gallery = () => {
             <Link href="/galeria">
               <Image
                 alt="img"
-                src="/lobby-1.jpg"
+                src="/lobby-1.webp"
                 fill
                 className="object-cover transition-transform duration-600 group-hover:scale-110"
               />
@@ -50,7 +50,7 @@ const Gallery = () => {
             <Link href="/galeria">
               <Image
                 alt="img"
-                src="/outside.jpg"
+                src="/outside.webp"
                 fill
                 className="object-cover transition-transform duration-600 group-hover:scale-110"
               />
@@ -77,7 +77,7 @@ const Gallery = () => {
             <Link href="/galeria">
               <Image
                 alt="img"
-                src="/spa.jpg"
+                src="/spa.webp"
                 fill
                 className="object-cover transition-transform duration-600 group-hover:scale-110"
               />

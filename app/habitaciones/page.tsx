@@ -6,7 +6,7 @@ import WhatsappButton from "@/components/WhatsappButton";
 export default function RoomsPage() {
   return (
     <main>
-      <PagesHero bgUrl="/room-hero.png" />
+      <PagesHero bgUrl="/room-hero.webp" />
       <RoomGallery />
       <RoomServices />
       <WhatsappButton />

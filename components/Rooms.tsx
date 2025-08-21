@@ -22,7 +22,7 @@ const Rooms = () => {
 
         {/* Imagen + Caja de texto */}
         <div className="relative w-full md:h-[450px] h-[500px] md:mb-20">
-          <Image alt="" src={"/room-11.png"} fill className="object-cover" />
+          <Image alt="" src={"/room-11.webp"} fill className="object-cover" />
           <div className="absolute inset-0 bg-black/30"></div>
           {/* CTA */}
 

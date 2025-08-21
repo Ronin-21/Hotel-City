@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const roomServices = [
   {
-    img: "/breakfast-1.png",
+    img: "/breakfast-1.webp",
     title: "Con desayuno",
     description:
       "Incluí el desayuno en tu reserva y comenzá cada mañana con una selección de productos frescos: panes caseros, facturas, frutas, cereales, infusiones y jugos.",
   },
   {
-    img: "/breakfast-2.png",
+    img: "/breakfast-2.webp",
     title: "Con media pensión",
     description:
       "Elegí media pensión y disfrutá, además del desayuno, de una cena completa en nuestro restaurante.",
   },
   {
-    img: "/breakfast-3.png",
+    img: "/breakfast-3.webp",
     title: "Con pensión completa",
     description:
       "Con la pensión completa, viví una experiencia sin preocupaciones: desayuno, almuerzo y cena incluidos.",

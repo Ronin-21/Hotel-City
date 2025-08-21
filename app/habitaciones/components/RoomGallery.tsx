@@ -7,25 +7,25 @@ import RoomSlider from "./RoomSlider";
 
 const roomStandard = [
   {
-    img: "/room-2.jpg",
+    img: "/room-2.webp",
   },
   {
-    img: "/room-3.jpg",
+    img: "/room-3.webp",
   },
   {
-    img: "/room-10.png",
+    img: "/room-10.webp",
   },
 ];
 
 const roomSuperior = [
   {
-    img: "/room-1.jpg",
+    img: "/room-1.webp",
   },
   {
-    img: "/room-6.png",
+    img: "/room-6.webp",
   },
   {
-    img: "/room-8.png",
+    img: "/room-8.webp",
   },
 ];
 

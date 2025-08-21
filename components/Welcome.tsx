@@ -28,7 +28,7 @@ const Welcome = () => {
         {/* Imagen principal */}
         <div className="absolute top-0 right-0 h-[400px] md:h-[650px] w-full md:w-[500px] rounded-lg overflow-hidden shadow-xl shadow-black/50 intersect:animate-fade-down intersect:animate-delay-200">
           <Image
-            src={"/pool-1.jpg"}
+            src={"/pool-1.webp"}
             alt="Welcome Image"
             fill
             className="object-cover"
@@ -38,7 +38,7 @@ const Welcome = () => {
         {/* Imagen secundaria */}
         <div className="absolute top-1/5 left-0 md:-left-1/3 h-[250px] md:h-[450px] w-[250px] md:w-[350px] rounded-lg overflow-hidden shadow-xl shadow-black/70 intersect:animate-fade-right intersect:animate-delay-300">
           <Image
-            src={"/bar.jpg"}
+            src={"/bar.webp"}
             alt="Welcome Image"
             fill
             className="object-cover"
