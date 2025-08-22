@@ -20,37 +20,45 @@ const restora = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hotel City",
-    template: "%s - Hotel City",
+    default: "Grand Hotel City | Hotel 3 Estrellas en Termas",
+    template: "%s | Grand Hotel City",
   },
   description:
-    "Descubre el Hotel City, tu refugio de lujo en la ciudad. Disfruta de habitaciones elegantes, servicios excepcionales y una ubicación inmejorable. ¡Reserva ahora y vive una experiencia inolvidable!",
-  twitter: {
-    card: "summary_large_image",
-    site: "@TuUsuarioTwitter", // si tienes cuenta
-    creator: "@TuUsuarioTwitter",
-  },
+    "Grand Hotel City, un hotel 3 estrellas en Termas, ideal para disfrutar de confort y elegancia. Habitaciones modernas, restaurante gourmet, spa y ubicación privilegiada cerca de los principales atractivos. Reserva online y viví una estadía inolvidable.",
+  keywords: [
+    "hotel en Termas",
+    "Grand Hotel City",
+    "hotel 3 estrellas",
+    "habitaciones de lujo",
+    "reserva de hotel",
+    "hotel céntrico Termas",
+    "spa y restaurante hotel",
+  ],
   openGraph: {
-    title: "Hotel City - Refugio de lujo en la ciudad",
+    type: "website",
+    url: "https://www.tudominio.com",
+    title: "Grand Hotel City | Hotel 3 Estrellas en Termas",
     description:
-      "Disfruta de habitaciones elegantes, servicios excepcionales y una ubicación inmejorable. Reserva ahora y vive una experiencia inolvidable.",
-    url: "https://tusitio.com",
-    siteName: "Hotel City",
+      "Descubre el Grand Hotel City en Termas. Habitaciones elegantes, spa, restaurante gourmet y la mejor ubicación para tu estadía.",
     images: [
       {
-        url: "https://tusitio.com/og-image.jpg", // imagen para redes (ideal 1200x630 px)
+        url: "/portada.webp",
         width: 1200,
         height: 630,
-        alt: "Hotel City",
+        alt: "Grand Hotel City - Fachada y entrada principal",
       },
     ],
-    locale: "es_AR",
-    type: "website",
+    siteName: "Grand Hotel City",
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-16x16.png",
+  twitter: {
+    card: "summary_large_image",
+    title: "Grand Hotel City | Hotel 3 Estrellas en Termas",
+    description:
+      "Elegancia, confort y ubicación privilegiada en Termas. Reservá ahora tu estadía en el Grand Hotel City.",
+    images: ["/portada.webp"],
+  },
+  alternates: {
+    canonical: "https://www.tudominio.com",
   },
 };
 
