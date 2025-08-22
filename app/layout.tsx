@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://www.tudominio.com",
+    url: "https://www.grandhotelcity.com",
     title: "Grand Hotel City | Hotel 3 Estrellas en Termas",
     description:
       "Descubre el Grand Hotel City en Termas. Habitaciones elegantes, spa, restaurante gourmet y la mejor ubicación para tu estadía.",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     images: ["/portada.webp"],
   },
   alternates: {
-    canonical: "https://www.tudominio.com",
+    canonical: "https://www.grandhotelcity.com",
   },
 };
 
