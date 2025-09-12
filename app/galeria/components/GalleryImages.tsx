@@ -12,7 +12,7 @@ interface Tab {
 
 const tabs: Tab[] = [
   { key: "habitaciones", label: "Habitaciones" },
-  { key: "patio", label: "Patio" },
+  { key: "patio", label: "Jardín" },
   { key: "spa", label: "Spa & Piscina" },
   { key: "salon", label: "Salón" },
 ];
@@ -56,7 +56,7 @@ const GalleryImages = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("habitaciones");
 
   return (
-    <div className="max-w-7xl mx-auto md:mt-10 mt-5">
+    <div className="mx-auto mt-5 max-w-7xl md:mt-10">
       {/* Botones de pestañas */}
       <div className="grid grid-cols-4 gap-2 mb-8">
         {tabs.map((tab) => (
@@ -83,7 +83,7 @@ const GalleryImages = () => {
               alt={"Imagen de " + activeTab}
               width={600}
               height={400}
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
             />
           </div>
         ))}

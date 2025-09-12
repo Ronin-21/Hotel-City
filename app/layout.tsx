@@ -19,6 +19,7 @@ const restora = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.grandhotelcity.com"),
   title: {
     default: "Grand Hotel City | Hotel 3 Estrellas en Termas",
     template: "%s | Grand Hotel City",
